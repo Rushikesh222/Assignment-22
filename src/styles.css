@@ -1,4 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #8d99ae;
+  --secondary-color: #2b2d42;
+  --background-color: #edf6f9;
+  --text-color-dark: #000000;
+  --text-color-light: #ffffff;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e5e3e1;
+}
 .App {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color-dark);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 36px;
+  padding: 16px 4px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  font-weight: 700;
+  border: 1px dashed var(--primary-color);
+}
+h2 {
+  font-size: 26px;
+  line-height: 1;
+  margin: 4% auto 4% auto;
+}
+h3 {
+  font-size: 18px;
+  line-height: 1;
+  margin: 2%;
+}
+.page {
+  margin-top: 10%;
+}
+.message {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+/* Navbar.css */
+.navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px 0;
+  margin-top: 30px;
+  margin-bottom: -4%;
+}
+.navbar li {
+  display: block;
+  flex-basis: 20%;
+}
+
+.nav-item {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-color-dark);
+  font-weight: normal;
+  border: 1px solid var(--secondary-color);
+  padding: 8px 16px;
+  transition: 0.2s all ease-in-out;
+}
+
+.nav-item.active {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: 4px 4px 0 var(--secondary-color);
+  transition: 0.2s all ease-in-out;
+  color: var(--primary-color);
+}
+
+.nav-item:hover {
+  box-shadow: 4px 4px 0 var(--secondary-color);
+  transition: 0.2s all ease-in-out;
+}
+
+/* Items.css */
+.page {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.item-table {
+  width: 96%;
+  border-collapse: collapse;
+  margin: 2% 2%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-table th,
+.item-table td {
+  padding: 12px;
+  border: 1px dashed var(--secondary-color);
+  text-align: center;
+  font-size: 14px;
+}
+
+.item-table th {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* ItemCard.css */
+.item-card {
+  background-color: #fff;
+  border: 1px dashed var(--secondary-color);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.item-card td {
+  padding: 12px;
+  text-align: center;
+  border: 1px dashed var(--secondary-color);
+}
+
+.item-card td a {
+  text-decoration: none;
+  color: var(--text-color-dark);
+  display: block;
+}
+.item-card:hover {
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+.item-card:hover td a {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+
+.primary-btn {
+  padding: 8px 36px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--text-color-light);
+  transition: 0.2s all ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.primary-btn:hover {
+  background-color: var(--text-color-light);
+  color: var(--secondary-color);
+  transition: 0.2s all ease-in-out;
+}
+.secondary-btn {
+  padding: 8px 36px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-color-light);
+  transition: 0.2s all ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.secondary-btn:hover {
+  background-color: var(--text-color-light);
+  color: var(--primary-color);
+  transition: 0.2s all ease-in-out;
+}
+
+/* Form Style */
+.form {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px dashed var(--secondary-color);
+  background-color: #fff;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(58, 37, 82, 0.252);
+  border-radius: 3px;
+  font-size: 14px;
+  color: var(--text-color-dark);
+}
+.form input:focus,
+.form select:focus {
+  outline: none;
+}
+
+.form .radio-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+.form .radio-btn-container .radio-btn {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 0 6px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.form .radio-btn-container .checkbox-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 0 6px;
+  margin-bottom: -15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.form .radio-btn-container:last-of-type .checkbox-btn {
+  margin-bottom: 0;
+}
+.form .radio-btn-container .radio-btn input[type="radio"],
+.form .radio-btn-container .checkbox-btn input[type="checkbox"] {
+  width: fit-content;
+  padding: 6px;
+  margin-bottom: 0;
+}
+.form button {
+  padding: 8px 36px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-color-light);
+  transition: 0.2s all ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: var(--text-color-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transition: 0.2s all ease-in-out;
+}
+
+/* Details */
+
+.details-page p {
+  text-align: left;
+  max-width: 475px;
+  margin: 0 auto;
+  padding: 0.25rem;
+}
+
+.details-page p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+
+footer > p {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px;
+}
+ /* repo */
+ .page {
+  margin-top: 10%;
+}
+.message {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  padding: 20px;
+}
+.message a {
+  margin: 5px;
 }

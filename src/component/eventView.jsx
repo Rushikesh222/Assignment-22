@@ -18,7 +18,17 @@ const EventView = () => {
   return (
     <div className="page">
       {status === "loading" && <p className="message">Loading...</p>}
-      {status === "error" && <p className="message">{error}</p>}
+      {status === "error" && <p className="message">
+              {" "}
+              Repl isn't wakeup yet
+              <a
+                href="https://replit.com/@RushikeshShirsa/VolunteerManagementBackend"
+                target="_blank"
+              >
+                {" "}
+                Click here to navigate
+              </a>
+            </p>}
       {status === "success" && <EventList events={events} />}
     </div>
   );

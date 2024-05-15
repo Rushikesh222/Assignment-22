@@ -19,7 +19,7 @@ const fetchEventsAsync = createAsyncThunk("events/fetchEvents", async () => {
       throw new Error("Unable to fetch all events");
     }
   } catch (error) {
-    throw new Error(error.error);
+    throw new Error(error);
   }
 });
 
